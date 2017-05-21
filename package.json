@@ -1,0 +1,22 @@
+{
+  "name": "kissfft-js",
+  "version": "0.1.0",
+  "description": "Javascript port of KissFFT via Emscripten",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jfunk-/kissfft-js"
+  },
+  "engines": {
+    "node": "4.4.7^"
+  },
+  "keywords": [
+    "FFT"
+  ],
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "license": "MIT"
+}
