@@ -33,7 +33,7 @@ var kiss_fft_free = kissFFTModule.cwrap(
     'kiss_fft_free', 'void', ['number']
 );
 
-function KissFFT(size) {
+var FFT = function (size) {
 
     this.size = size;
     this.fcfg = kiss_fft_alloc(size, false);
@@ -50,23 +50,23 @@ function KissFFT(size) {
 	kiss_fft(this.fcfg, this.inptr, this.outptr);
 	return new Float32Array(kissFFTModule.HEAPU8.buffer,
 				this.outptr, this.size * 2);
-    }
+    };
     
     this.inverse = function(cin) {
 	this.cin.set(cpx);
 	kiss_fft(this.icfg, this.inptr, this.outptr);
 	return new Float32Array(kissFFTModule.HEAPU8.buffer,
 				this.outptr, this.size * 2);
-    }
+    };
     
     this.dispose = function() {
 	kissFFTModule._free(this.inptr);
 	kiss_fft_free(this.fcfg);
 	kiss_fft_free(this.icfg);
     }
-}
+};
 
-function KissFFTR(size) {
+var FFTR = function (size) {
 
     this.size = size;
     this.fcfg = kiss_fftr_alloc(size, false);
@@ -83,19 +83,23 @@ function KissFFTR(size) {
 	kiss_fftr(this.fcfg, this.rptr, this.cptr);
 	return new Float32Array(kissFFTModule.HEAPU8.buffer,
 				this.cptr, this.size + 2);
-    }
+    };
     
     this.inverse = function(cpx) {
 	this.ci.set(cpx);
 	kiss_fftri(this.icfg, this.cptr, this.rptr);
 	return new Float32Array(kissFFTModule.HEAPU8.buffer,
 				this.rptr, this.size);
-    }
+    };
     
     this.dispose = function() {
 	kissFFTModule._free(this.rptr);
 	kiss_fftr_free(this.fcfg);
 	kiss_fftr_free(this.icfg);
     }
-}
+};
 
+module.exports = {
+    FFT: FFT,
+    FFTR: FFTR
+};

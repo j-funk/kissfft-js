@@ -16,7 +16,8 @@
     "FFT"
   ],
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "mocha": "*",
+    "chai": "*"
   },
   "license": "MIT"
 }
