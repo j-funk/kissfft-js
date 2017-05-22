@@ -1,6 +1,8 @@
 # kissfft-js
 Javascript port of KissFFT via Emscripten.
 
+Install: `npm install kissfft-js`
+
 Thanks to [Chris Cannam](https://code.soundsoftware.ac.uk/projects/js-dsp-test) 
 for transpiling KissFFT and his 
 [benchmarks](http://all-day-breakfast.com/js-dsp-test/fft/) of the various FFT 
