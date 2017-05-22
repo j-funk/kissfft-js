@@ -13,5 +13,6 @@ execution speed.
 Example usage for `kissfft-js` can be found in the test directory 
 though only the real valued transform / inverse are checked.
 
-The original KissFFT docs are also [here](./src/README.md).
+The original KissFFT docs are also 
+[here](https://github.com/j-funk/kissfft-js/blob/master/src/README.md).
  
