@@ -1,6 +1,6 @@
 var chai = require('chai');
 
-var KissFFT = require('../src/FFT');
+var KissFFT = require('../src/main');
 var A2_1024 = require('./audioBuffer.js');
 
 

@@ -2,6 +2,7 @@
   "name": "kissfft-js",
   "version": "0.1.2",
   "description": "Javascript port of KissFFT via Emscripten",
+  "main": "src/main.js",
   "scripts": {
     "test": "mocha"
   },
