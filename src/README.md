@@ -1,5 +1,5 @@
-# fftw-js
-Javascript port of FFTW via Emscripten.
+# kissfft-js
+Javascript port of KissFFT via Emscripten.
 
 Install: `npm install kissfft-js`
 
