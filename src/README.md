@@ -1,4 +1,25 @@
-KISS FFT - A mixed-radix Fast Fourier Transform based up on the principle, 
+# fftw-js
+Javascript port of FFTW via Emscripten.
+
+Install: `npm install kissfft-js`
+
+I've added new benchmarks against other
+popular Javascript FFT algorithms [here](https://github.com/j-funk/js-dsp-test/).
+
+Example usage for `KissFFT` can be found in the test directory.
+The examples are only of the real valued transform / inverse, however complex
+to complex is also available.
+
+Thanks to [Chris Cannam](https://code.soundsoftware.ac.uk/projects/js-dsp-test)
+for the original benchmark tool and for transpiling KissFFT. This version has
+been optimized to perform much faster since forking Chris' version.
+
+****************
+
+The Original README from creator Mark Borgerding follows...
+
+```
+KISS FFT - A mixed-radix Fast Fourier Transform based up on the principle,
 "Keep It Simple, Stupid."
 
     There are many great fft libraries already around.  Kiss FFT is not trying
@@ -132,3 +153,4 @@ TODO:
 AUTHOR:
     Mark Borgerding
     Mark@Borgerding.net
+```
