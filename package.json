@@ -1,6 +1,6 @@
 {
   "name": "kissfft-js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Javascript port of KissFFT via Emscripten",
   "main": "src/main.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git@github.com:j-funk/kissfft-js"
   },
   "engines": {
-    "node": "4.4.7^"
+    "node": ">=4.4.7"
   },
   "keywords": [
     "FFT",
