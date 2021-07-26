@@ -52,7 +52,7 @@ var FFT = function (size) {
 				this.outptr, this.size * 2);
     };
     
-    this.inverse = function(cin) {
+    this.inverse = function(cpx) {
 	this.cin.set(cpx);
 	kiss_fft(this.icfg, this.inptr, this.outptr);
 	return new Float32Array(kissFFTModule.HEAPU8.buffer,
